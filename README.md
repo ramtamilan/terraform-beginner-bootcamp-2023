@@ -14,6 +14,7 @@ The general format:
 - **PATCH** version when you make backward compatible bug fixes
 Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
 
+ 3-refactor-terraform-cli
 ## Install the Terraform CLI
 
 The Terraform CLI installation instructions have changed due ti gpg keyring changes. So we needed to refer latest cli instructions
@@ -50,3 +51,5 @@ We need to be careful when using the Init because it will not rerun restart any 
 
 
 [Documentation for gitpod tasks](https://www.gitpod.io/docs/configure/workspaces/tasks)
+
+ main
