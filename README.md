@@ -129,3 +129,50 @@ gitpod /workspace/terraform-beginner-bootcamp-2023 (7-refactor-aws-cli-script) $
 }
 
 We'll need to generate AWS CLI credits from IAM user in order to the user AWS CLI.
+
+## Terraform Basics
+
+### Terraform Registry
+
+Terraform sources their providers and modules from the Terraforn registry which is located at [registry.terraform.io](https://registry.terraform.io/)
+
+- **Providers** is an interface to APIs that will allow to create resources in terraform
+- **Modules** are self-contained packages of Terraform configurations that are managed as a group, portable and sharable.
+
+[Random Terraform Providers](https://registry.terraform.io/providers/hashicorp/random/latest)
+
+## Terraform Console
+
+We can see a list of all the Terraform commands by typing `terraform`
+
+#### Terraform Init
+
+`terraform init` prepares the working directory so Terraform can run the configuration.
+
+#### Terraform Plan
+
+**Plan** `terraform plan`lets you preview any changes before you apply them.
+
+#### Terraform Apply
+
+**Apply** `terraform apply` executes the changes defined by your Terraform configuration to create, update, or destroy resources. If we want to automatically approve apply we can provide the `terraform apply --auto-approve`
+
+### Terraform Lock files
+
+`.terraform.lock.hcl` contains the  locked versioning for the providers or modules that should be used with this project.
+
+The Terraform lock file **should be committed** to your version control system (VSC) eg. Github
+
+### Terraform State files
+
+`.terraform.tfstate` contain information about the current state of your infrastructure. 
+
+This file **should not be committed** to your VCS.
+
+This file can contain sensitive data. If you lose this file, you lose known state of the infrastructure .
+
+`.terraform.tfstate.backup` is the previous state file state.
+
+### Terraform Directory
+
+`.terraform` directory contains binaries of terraform providers
