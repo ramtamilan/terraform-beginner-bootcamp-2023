@@ -128,7 +128,9 @@ gitpod /workspace/terraform-beginner-bootcamp-2023 (7-refactor-aws-cli-script) $
     "Arn": "arn:aws:iam::123456789023:user/USER1"
 }
 
+```
 We'll need to generate AWS CLI credits from IAM user in order to the user AWS CLI.
+
 
 ## Terraform Basics
 
