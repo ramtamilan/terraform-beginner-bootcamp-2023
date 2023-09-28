@@ -159,13 +159,17 @@ We can see a list of all the Terraform commands by typing `terraform`
 
 **Apply** `terraform apply` executes the changes defined by your Terraform configuration to create, update, or destroy resources. If we want to automatically approve apply we can provide the `terraform apply --auto-approve`
 
-### Terraform Lock files
+#### Terraform Destroy
+
+This will destory the resources. eg `terraform apply --auto-approve`
+
+#### Terraform Lock files
 
 `.terraform.lock.hcl` contains the  locked versioning for the providers or modules that should be used with this project.
 
 The Terraform lock file **should be committed** to your version control system (VSC) eg. Github
 
-### Terraform State files
+#### Terraform State files
 
 `.terraform.tfstate` contain information about the current state of your infrastructure. 
 
@@ -175,6 +179,6 @@ This file can contain sensitive data. If you lose this file, you lose known stat
 
 `.terraform.tfstate.backup` is the previous state file state.
 
-### Terraform Directory
+#### Terraform Directory
 
 `.terraform` directory contains binaries of terraform providers
