@@ -208,3 +208,14 @@ Then add the following contents to the file
   }
 }
 ```
+
+### Git commands incase changes done in Main without branch
+```
+git add .
+git stash save
+git fetch - to get branch
+git checkout 'branchname'
+git pull
+git stash apply
+```
+We have automated the workaround with the bash script [bin/generate_tfrc_credentials](bin/generate_tfrc_credentials)
