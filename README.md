@@ -121,7 +121,7 @@ aws sts get-caller-identity
 If it is successful you should see a json payload return that looks like below
 
 ```json
-gitpod /workspace/terraform-beginner-bootcamp-2023 (7-refactor-aws-cli-script) $ aws sts get-caller-identity
+
 {
     "UserId": "AIDAXKVX34GSYGV5AAE3X",
     "Account": "123456789023",
@@ -182,3 +182,29 @@ This file can contain sensitive data. If you lose this file, you lose known stat
 #### Terraform Directory
 
 `.terraform` directory contains binaries of terraform providers
+
+#### Issues with Terraform cloud login and Gitpod Workspace
+
+When attempting to run `terraform login` it asks for token but there are no option to provide the token.
+As a workaround, we had to edit the `credentials.tfrc.json` file and save the generated token.
+
+```
+[Terraform cloud token](https://app.terraform.io/app/settings/tokens?source=terraform-login)
+```
+Then create and open the file manually here:
+
+```sh
+touch /home/gitpod/.terraform.d/credentials.tfrc.json
+open /home/gitpod/.terraform.d/credentials.tfrc.json
+```
+Then add the following contents to the file
+
+```
+{
+  "credentials": {
+    "app.terraform.io": {
+      "token": "Add Generated Token"
+    }
+  }
+}
+```
