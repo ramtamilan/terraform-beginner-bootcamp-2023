@@ -1,6 +1,15 @@
 # Terraform Beginner Bootcamp 2023
 
-## Semantic versioning:
+## Table of Contents
+
+- [Semantic Versioning](#semantic-versioning)
+- [Install the Terraform CLI](#install-the-terraform-cli)
+   - [Considerations with the Terraform CLI change](#considerations-for-linux-distrubution)
+
+
+
+
+## Semantic versioning
 This project is going utilize semantic versioning for its tagging.
 
 [semver.org](semver.org)
@@ -217,5 +226,6 @@ git fetch - to get branch
 git checkout 'branchname'
 git pull
 git stash apply
+
 ```
 We have automated the workaround with the bash script [bin/generate_tfrc_credentials](bin/generate_tfrc_credentials)
