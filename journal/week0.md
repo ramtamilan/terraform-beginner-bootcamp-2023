@@ -6,7 +6,7 @@
   * [Considerations for Linux Distrubution](#considerations-for-linux-distrubution)
   * [Refactoring into Bash Scripts](#refactoring-into-bash-scripts)
   * [Linux Permission Considerations](#linux-permission-considerations)
-  * [Workspace tasks (Before,Init, Command)](#workspace-tasks--before-init--command-)
+  * [Workspace tasks - Before,Init, Command](#workspace-tasks---before-init--command)
   * [Working Env Vars](#working-env-vars)
     + [env command](#env-command)
     + [Setting and Unsetting Env Vars](#setting-and-unsetting-env-vars)
@@ -72,7 +72,7 @@ Change linux permission to fix executable at the user mode.
 
 [Permissions](https://en.wikipedia.org/wiki/Chmod)
 
-### Workspace tasks (Before,Init, Command)
+### Workspace tasks - Before,Init, Command
 
 We need to be careful when using the Init because it will not rerun restart any existing workspace.
 
