@@ -11,6 +11,10 @@ git fetch - to get branch
 git checkout 'branchname'
 git pull
 git stash apply
+git checkout main
+git pull
+git tag "X.X.X"
+git push --tags
 
 ```
 ## Weekly Journals
