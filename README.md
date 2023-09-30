@@ -23,5 +23,3 @@ git push --tags
 ## Extras
  - [Github Markdown TOC](https://ecotrust-canada.github.io/markdown-toc/)
 
- - 
-
