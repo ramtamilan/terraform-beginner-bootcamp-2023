@@ -6,7 +6,7 @@
   * [Considerations for Linux Distrubution](#considerations-for-linux-distrubution)
   * [Refactoring into Bash Scripts](#refactoring-into-bash-scripts)
   * [Linux Permission Considerations](#linux-permission-considerations)
-  * [Workspace tasks - Before,Init, Command](#workspace-tasks---before-init--command)
+  * [Workspace tasks - Before,Init, Command](#workspace-tasks---beforeinit-command)
   * [Working Env Vars](#working-env-vars)
     + [env command](#env-command)
     + [Setting and Unsetting Env Vars](#setting-and-unsetting-env-vars)
