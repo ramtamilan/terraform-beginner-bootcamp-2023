@@ -77,6 +77,46 @@ You can use terraform import bt it won't for all resources. We would need to che
 
 If the resource is modified or deleted manually and if we run Terraform pla is with attempt to put our infrastructure back into the expected state fixing configurations drift.
 
+## Fix using Terraform Refresh
+
+```sh
+terraform apply -refresh-only -auto-approve
+```
+
+## Terraform Modules
+
+### Terraform Module Structures
+
+It is recommend to place modules in a `modules` directory when locally developing modules but you can name it whatever you like.
+
+## Passing Input Variables
+
+We can pass input variables to our module.
+The modules has to declare the variables in its own variable.tf
+
+```tf
+module "terrahouse_aws" {
+  source = "./modules/terrahouse_aws"
+  user_uuid = var.user_uuid
+  bucket_name = var.bucket_name
+}
+```
+
+### Modules Sources
+
+Using the source we can import the module from various places eg:
+- locally
+- Github
+- Terraform registry
+
+```
+module "terrahouse_aws" {
+  source = "./modules/terrahouse_aws"
+}
+```
+
+[Module Sources docs](https://developer.hashicorp.com/terraform/language/modules/sources)
+
 
 
 
