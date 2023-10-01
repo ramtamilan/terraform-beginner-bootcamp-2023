@@ -1,11 +1,23 @@
-#https://registry.terraform.io/providers/hashicorp/aws/latest/docs
-resource "aws_s3_bucket" "website_bucket" {
-  # Bucket Naming Rules
-  # https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html
-   bucket = var.bucket_name.result
+terraform {
+  #backend "remote" {
+  #  hostname = "app.terraform.io"
+  #  organization = "ramtf"
 
-   tags = {
-    UserUuid       = var.user_uuid
-    
-   }
+  #  workspaces {
+  #    name = "terra-house-bt"
+  #  }
+  #}
+
+  #cloud {
+  #  organization = "ramtf"
+  #  workspaces {
+  #    name = "terra-house-bt"
+  #  }
+  #}    
+}
+
+module "terrahouse_aws" {
+  source = "./modules/terrahouse_aws"
+  user_uuid = var.user_uuid
+  bucket_name = var.bucket_name
 }
